@@ -3,6 +3,7 @@ lock '3.1.0'
 
 set :application, 'website-ember-cli-part'
 set :repo_url, 'git@github.com:ember-admin/website-ember-cli-part.git'
+set :deploy_to,   "/var/www/website-ember-cli-part"
 
 #set :branch, 'ember-app-kit'
 
@@ -41,8 +42,6 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      upload! "config/deploy/templates/#{fetch(:stage)}.js", "#{release_path}/config/environments/production.js"
-      execute "cd #{release_path} && gem install sass"
       execute "cd #{release_path} && bower install"
       execute "cd #{release_path} && npm install"
       execute "cd #{release_path} && ember build --environment production"
