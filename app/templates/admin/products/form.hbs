@@ -1,0 +1,42 @@
+<form class="admin-form">
+    <div class="panel panel-default">
+        <div class="panel-heading">Base Information</div>
+        <div class="panel-body">
+          {{#each attribute in controller.formAttributes}}
+            {{admin-input class="admin-attribute" model=controller.model name=attribute.name}}
+          {{/each}}
+          <div class="control-group">
+            <label class="control-label">Company</label>
+            <div class="controls">
+              {{view "select" contentBinding="controller.companies" selectionBinding="controller.model.company" optionLabelPath="content.title" optionValuePath="content.id"}}
+            </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">User</label>
+              <div class="controls">
+                {{view "select" contentBinding="controller.users" selectionBinding="controller.model.user" optionLabelPath="content.email" optionValuePath="content.id"}}
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">File Uploads</div>
+        <div class="panel-body">
+          {{#each attribute in controller.fileuploads}}
+            {{view 'admin/fileupload/drag-and-drop-zone' class="admin-fileupload" model=controller.model property=attribute.name}}
+          {{/each}}
+        </div>
+    </div>
+
+  {{#if controller.model.asGoogleMap}}
+      <div class="panel panel-default">
+          <div class="panel-heading">Map</div>
+          <div class="panel-body">
+            {{google-map model=controller.model}}
+          </div>
+      </div>
+  {{/if}}
+
+  {{partial "admin/form-buttons"}}
+</form>
