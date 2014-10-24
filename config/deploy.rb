@@ -43,10 +43,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       execute "cd #{release_path} && bower install"
-      execute "cd #{release_path} && npm install"
       execute "cd #{release_path} && ember build --environment production"
-      # execute "rm -rf /var/www/magtuner-rails-#{fetch(:stage)}/current/public/dist"
-      # execute "ln -s #{release_path}/dist /var/www/magtuner-rails-#{fetch(:stage)}/current/public/dist"
     end
   end
 
