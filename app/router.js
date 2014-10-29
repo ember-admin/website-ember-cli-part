@@ -14,6 +14,7 @@ MetaRoute.map(Router, function() {
   this.resources("users");
   this.resources("companies");
   this.resources("products");
+  this.resources("categories");
 });
 
 export default Router;

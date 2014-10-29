@@ -10,6 +10,7 @@ export default {
         this.navigate("Companies");
         this.navigate("Products");
       });
+      this.navigate("Categories");
     });
   }
 };
