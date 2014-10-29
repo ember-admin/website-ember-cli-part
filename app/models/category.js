@@ -11,5 +11,9 @@ export default DS.Model.extend({
 
   categories: DS.hasMany('category', {async: true, inverse: null}),
 
-  children: Ember.computed.alias('categories')
+  children: Ember.computed.alias('categories'),
+
+  rebuildUrl: function(){
+    return '/admin/api/v1/categories/rebuild';
+  }.property()
 });
