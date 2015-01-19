@@ -22,7 +22,7 @@ module.exports = function(environment) {
           "*.gstatic.com *.yandex.ru",
       'style-src': "'self' 'unsafe-inline' use.typekit.net *.googleapis.com",
       'img-src': "*",
-      'font-src': '*.gstatic.com'
+      'font-src': "'self' *.gstatic.com"
     }
 
   };
