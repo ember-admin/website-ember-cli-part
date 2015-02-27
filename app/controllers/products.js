@@ -5,6 +5,7 @@ import SearchLogic from 'ember-cli-admin/dsl/search';
 export default Ember.ObjectController.extend(TableViewController, {
   formAttributes: ['title','price'],
   sortFields: ['id', 'title', 'price'],
+  sortAssetsBy: "position",
 
   companies: function(){
     return this.store.find('company');
