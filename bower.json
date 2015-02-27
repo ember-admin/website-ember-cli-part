@@ -15,6 +15,7 @@
     "qunit": "~1.15.0",
     "bootstrap-sass-official": "3.2.0",
     "typeahead.js": "twitter/typeahead.js#0.10.5",
-    "jquery-ui-sortable": "*"
+    "jquery-ui-sortable": "*",
+    "jquery-ui-touch-punch": "*"
   }
 }
