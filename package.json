@@ -31,7 +31,7 @@
     "ember-data": "1.0.0-beta.10",
     "ember-export-application-global": "^1.0.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5",
+    "glob": "4.0.5",
     "ember-cli-map": "git://github.com/ember-admin/ember-cli-map.git",
     "broccoli-merge-trees": "0.1.4",
     "broccoli-sass": "^0.2.2",
