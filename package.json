@@ -29,7 +29,6 @@
     "ember-cli-dependency-checker": "0.0.8",
     "ember-cli-6to5": "^0.2.1",
     "ember-cli-admin": "0.4.9",
-    "ember-cli-admin-languages": "0.0.1",
     "ember-cli-coffeescript": "^0.1.0",
     "ember-cli-htmlbars": "^0.6.0",
     "ember-cli-ic-ajax": "0.1.1",
