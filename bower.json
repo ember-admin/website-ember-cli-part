@@ -19,8 +19,7 @@
     "typeahead.js": "twitter/typeahead.js#0.10.5",
     "jquery-ui-sortable": "*",
     "select2": "~3.5.2",
-    "jquery-ui-touch-punch": "*",
-    "bootstrap3-wysiwyg": "bootstrap-wysiwyg/bootstrap3-wysiwyg"
+    "jquery-ui-touch-punch": "*"
   },
   "resolutions": {
     "handlebars": ">= 2.0.0 < 3.0.0",
