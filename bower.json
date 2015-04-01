@@ -16,8 +16,6 @@
     "bootstrap-sass-official": "3.2.0",
     "typeahead.js": "twitter/typeahead.js#0.10.5",
     "jquery-ui-sortable": "*",
-    "ember-simple-auth": "0.7.1",
-    "flag-icon-css": "0.6.4",
     "select2": "~3.5.2",
     "jquery-ui-touch-punch": "*"
   }
