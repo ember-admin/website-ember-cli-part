@@ -21,5 +21,9 @@
     "select2": "~3.5.2",
     "jquery-ui-touch-punch": "*",
     "bootstrap3-wysiwyg": "bootstrap-wysiwyg/bootstrap3-wysiwyg"
+  },
+  "resolutions": {
+    "handlebars": ">= 2.0.0 < 3.0.0",
+    "jquery": "^1.11.1"
   }
 }
