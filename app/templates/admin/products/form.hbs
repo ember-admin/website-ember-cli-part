@@ -2,19 +2,19 @@
     <div class="panel panel-default">
         <div class="panel-heading">Base Information</div>
         <div class="panel-body">
-          {{#each attribute in controller.formAttributes}}
-            {{admin-input class="admin-attribute" model=controller.model name=attribute}}
+          {{#each formAttributes as |attribute| }}
+            {{ admin-input class=admin-attribute model=model name=attribute }}
           {{/each}}
           <div class="control-group">
             <label class="control-label">Company</label>
             <div class="controls">
-              {{view "select" contentBinding="controller.companies" selectionBinding="controller.model.company" optionLabelPath="content.title" optionValuePath="content.id"}}
+              {{ admin-select content=companies selection=model.company optionLabelPath=content.title optionValuePath=content.id }}
             </div>
           </div>
           <div class="control-group">
               <label class="control-label">User</label>
               <div class="controls">
-                {{view "select" contentBinding="controller.users" selectionBinding="controller.model.user" optionLabelPath="content.email" optionValuePath="content.id"}}
+                {{ admin-select content=users selection=model.user optionLabelPath=content.email optionValuePath=content.id }}
               </div>
           </div>
         </div>
@@ -23,8 +23,8 @@
     <div class="panel panel-default">
         <div class="panel-heading">File Uploads</div>
         <div class="panel-body">
-          {{#each attribute in controller.fileuploads}}
-            {{view 'admin/fileupload/drag-and-drop-zone' class="admin-fileupload" model=controller.model property=attribute.name}}
+          {{#each fileuploads as |attributee| }}
+            {{ admin/fileupload/drag-and-drop-zone class=admin-fileupload model=model property=attribute.name }}
           {{/each}}
         </div>
     </div>
@@ -33,7 +33,7 @@
       <div class="panel panel-default">
           <div class="panel-heading">Map</div>
           <div class="panel-body">
-            {{google-map model=controller.model}}
+            {{google-map model=model}}
           </div>
       </div>
   {{/if}}
