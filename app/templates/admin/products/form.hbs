@@ -8,13 +8,25 @@
           <div class="control-group">
             <label class="control-label">Company</label>
             <div class="controls">
-              {{ admin-select content=companies selection=model.company optionLabelPath=content.title optionValuePath=content.id }}
+              {{#admin-select content=companies selectedValue=model.company prompt="Select" as |select| }}
+                {{#each select.content as |item|}}
+                  <option value = {{ item.id }} selected={{ is-equal item selectedValue }}>
+                    {{ item.title }}
+                  </option>
+                {{/each}}                
+              {{/admin-select }}
             </div>
           </div>
           <div class="control-group">
               <label class="control-label">User</label>
               <div class="controls">
-                {{ admin-select content=users selection=model.user optionLabelPath=content.email optionValuePath=content.id }}
+                {{#admin-select content=users selectedValue=model.user prompt="Select" as |select| }}
+                  {{#each select.content as |item|}}
+                    <option value = {{ item.id }} selected={{ is-equal item selectedValue }}>
+                      {{ item.email }}
+                    </option>
+                  {{/each}}                
+                {{/admin-select }}
               </div>
           </div>
         </div>
@@ -29,7 +41,7 @@
         </div>
     </div>
 
-  {{#if controller.model.asGoogleMap}}
+  {{#if model.asGoogleMap}}
       <div class="panel panel-default">
           <div class="panel-heading">Map</div>
           <div class="panel-body">
