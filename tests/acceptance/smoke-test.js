@@ -4,7 +4,7 @@ import startApp from 'admin-app/tests/helpers/start-app';
 
 var application;
 
-module('Acceptance | users', {
+module('Acceptance | Smoke', {
   beforeEach: function() {
     application = startApp();
   },
@@ -14,6 +14,10 @@ module('Acceptance | users', {
   }
 });
 
-test('visiting /users', function(assert) {
-  visit('/users');
+test('visiting /', function(assert) {
+  visit('/');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/');
+  });
 });
