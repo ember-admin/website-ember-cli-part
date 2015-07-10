@@ -1,7 +1,6 @@
 {
   "name": "admin-app",
   "dependencies": {
-    "handlebars": "2.0.0",
     "jquery": "^1.11.1",
     "ember": "1.13.3",
     "ember-data": "1.13.4",
@@ -13,22 +12,15 @@
     "ember-qunit": "0.4.1",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "bootstrap-sass-official": "3.2.0",
-    "bootstrap-datepicker": "~1.3.1",
-    "chance": "~0.7.3",
-    "typeahead.js": "twitter/typeahead.js#0.10.5",
-    "jquery-ui-sortable": "*",
     "select2": "~3.5.2",
-    "jquery-ui-touch-punch": "*",
     "pretender": "~0.6.0",
-    "bootstrap-datepicker": "~1.4.0",
+    "bootstrap-sass-official": "~3.3.4",
+    "typeahead.js": "~0.11.1",
+    "jquery-ui-sortable": "*",
+    "jquery-ui-touch-punch": "*",
     "ember-inflector": "~1.3.1",
     "lodash": "~3.7.0",
     "Faker": "~2.1.3"
-  },
-  "resolutions": {
-    "handlebars": ">= 2.0.0 < 3.0.0",
-    "jquery": "^1.11.1"
   }
 }
 
