@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from 'admin-app/tests/helpers/start-app';
-import Mirage from 'ember-cli-mirage';
+
 
 var application, users;
 
