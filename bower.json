@@ -1,28 +1,26 @@
 {
   "name": "admin-app",
   "dependencies": {
-    "handlebars": "2.0.0",
     "jquery": "^1.11.1",
-    "ember": "1.9.1",
-    "ember-data": "1.0.0-beta.14",
+    "ember": "1.13.3",
+    "ember-data": "1.13.4",
     "ember-resolver": "~0.1.12",
     "loader.js": "stefanpenner/loader.js#3.2.0",
     "ember-cli-shims": "stefanpenner/ember-cli-shims#0.0.3",
-    "ember-cli-test-loader": "rwjblue/ember-cli-test-loader#0.0.4",
-    "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.2",
-    "ember-qunit": "0.2.4",
-    "ember-qunit-notifications": "0.0.4",
+    "ember-cli-test-loader": "rwjblue/ember-cli-test-loader#0.1.3",
+    "ember-load-initializers": "stefanpenner/ember-load-initializers#0.1.4",
+    "ember-qunit": "0.4.1",
+    "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "bootstrap-sass-official": "3.2.0",
-    "bootstrap-datepicker": "~1.3.1",
-    "chance": "~0.7.3",
-    "typeahead.js": "twitter/typeahead.js#0.10.5",
-    "jquery-ui-sortable": "*",
     "select2": "~3.5.2",
-    "jquery-ui-touch-punch": "*"
-  },
-  "resolutions": {
-    "handlebars": ">= 2.0.0 < 3.0.0",
-    "jquery": "^1.11.1"
+    "pretender": "~0.6.0",
+    "bootstrap-sass-official": "~3.3.4",
+    "typeahead.js": "~0.11.1",
+    "jquery-ui-sortable": "*",
+    "jquery-ui-touch-punch": "*",
+    "ember-inflector": "~1.3.1",
+    "lodash": "~3.7.0",
+    "Faker": "~2.1.3"
   }
 }
+
