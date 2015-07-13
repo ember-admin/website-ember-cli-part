@@ -22,9 +22,9 @@
     "broccoli-merge-trees": "0.1.4",
     "broccoli-static-compiler": "0.1.4",
     "ember-cli": "0.2.7",
-    "ember-cli-babel": "^5.0.0",
     "ember-cli-admin": "0.5.2",
     "ember-cli-app-version": "0.3.3",
+    "ember-cli-babel": "^5.0.0",
     "ember-cli-dependency-checker": "1.0.0",
     "ember-cli-htmlbars": "^0.7.9",
     "ember-cli-ic-ajax": "0.1.1",
@@ -33,6 +33,7 @@
     "ember-cli-qunit": "0.3.15",
     "ember-data": "1.13.4",
     "ember-export-application-global": "^1.0.2",
-    "ember-watson": "^0.2.0"
+    "ember-watson": "^0.2.0",
+    "ember-cli-map": "0.4.1"
   }
 }
