@@ -2,13 +2,14 @@
     <div class="panel panel-default">
         <div class="panel-heading">Base Information</div>
         <div class="panel-body">
-          {{#each formAttributes as |attribute| }}
+          {{translate-tabs attribute="title" model=model locales=locales}}
+          <!-- {{#each formAttributes as |attribute| }}
             {{ admin-input class=admin-attribute model=model name=attribute }}
-          {{/each}}
+          {{/each}} -->
           <div class="control-group">
             <label class="control-label">Company</label>
             <div class="controls">
-              {{#admin-select content=companies selectedValue=model.company prompt="Select" as |select| }}
+              {{#admin-select content=model.companies selectedValue=model.company prompt="Select" as |select| }}
                 {{#each select.content as |item|}}
                   <option value = {{ item.id }} selected={{ is-equal item selectedValue }}>
                     {{ item.title }}
@@ -20,7 +21,7 @@
           <div class="control-group">
               <label class="control-label">User</label>
               <div class="controls">
-                {{#admin-select content=users selectedValue=model.user prompt="Select" as |select| }}
+                {{#admin-select content=model.users selectedValue=model.user prompt="Select" as |select| }}
                   {{#each select.content as |item|}}
                     <option value = {{ item.id }} selected={{ is-equal item selectedValue }}>
                       {{ item.email }}

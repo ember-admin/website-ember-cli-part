@@ -1,7 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  title: DS.attr('string'),
+  title_en: DS.attr('string'),
+  title_de: DS.attr('string'),
+  title_fr: DS.attr('string'),
+  title_ru: DS.attr('string'),
   price: DS.attr('number'),
   company: DS.belongsTo('company'),
   user: DS.belongsTo('user'),
@@ -9,6 +12,10 @@ export default DS.Model.extend({
   updated_at: DS.attr('date'),
   created_at: DS.attr('date'),
   is_active: DS.attr('boolean'),
+
+  title: function(){
+    return this.get('title_en');
+  }.property('title_en'),
 
   fileuploads: ["product_images"],
 

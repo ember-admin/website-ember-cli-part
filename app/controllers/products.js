@@ -6,6 +6,11 @@ export default Ember.ObjectController.extend(TableViewController, {
   formAttributes: ['title','price'],
   sortFields: ['id', 'title', 'price'],
   sortAssetsBy: "position",
+  tableAttributes: ['title', 'price', 'company', 'user', 'is_active'],
+
+  title: function(){
+    return this.store.find('title');
+  }.property(),
 
   companies: function(){
     return this.store.find('company');

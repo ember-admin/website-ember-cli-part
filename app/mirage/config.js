@@ -46,7 +46,6 @@ export default function() {
   this.post('/users', 'user');
   this.del('/users/:id', 'user');
   this.put('/users/:id', 'user');
-  this.get('/users/autocomplete', 'users');
   
   this.get('/categories');
   this.get('/categories/:id', 'category');
@@ -54,6 +53,12 @@ export default function() {
   this.del('/categories/:id', 'category');
   this.put('/categories/:id', 'category');
   this.post('/categories/rebuild', 'category');
+
+  this.get('/products');
+  this.get('/products/:id', 'product');
+  this.post('/products', 'product');
+  this.del('/products/:id', 'product');
+  this.put('/products/:id', 'product');
 
 }
 
