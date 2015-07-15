@@ -14,5 +14,4 @@ var icons = pickFiles('bower_components/flag-icon-css/flags', {
   destDir: '/flags'
 });
 
-module.exports = mergeTrees([app.toTree(), bootstrapFonts]);
-module.exports = mergeTrees([app.toTree(), icons]);
+module.exports = mergeTrees([app.toTree(), bootstrapFonts, icons]);

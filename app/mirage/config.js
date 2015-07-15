@@ -60,6 +60,9 @@ export default function() {
   this.del('/products/:id', 'product');
   this.put('/products/:id', 'product');
 
+  this.get('/companies');
+  this.get('/companies/:id', 'company');
+  this.post('/companies', 'company');
+  this.del('/companies/:id', 'company');
+  this.put('/companies/:id', 'company');
 }
-
-  

@@ -25,7 +25,6 @@ module.exports = function(environment) {
       'img-src': "*",
       'font-src': "'self' *.gstatic.com"
     }
-
   };
 
   if (environment === 'development') {
