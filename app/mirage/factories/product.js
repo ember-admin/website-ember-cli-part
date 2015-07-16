@@ -13,6 +13,10 @@ export default Mirage.Factory.extend({
   title_fr: function(i) {
     return 'Produit #' + i;
   },
-  price: 200
+  price: 200,
+  company_id: function(i) {
+    return i + 1;
+  },
+  is_active: true
 });
 

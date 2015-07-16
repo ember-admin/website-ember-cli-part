@@ -54,11 +54,20 @@ export default function() {
   this.put('/categories/:id', 'category');
   this.post('/categories/rebuild', 'category');
 
-  this.get('/products');
-  this.get('/products/:id', 'product');
+  this.get('/products', function(db) {
+    return {products: db.products, companies: db.companies};
+  });
+  this.get('/products/:id', function(db, req) {
+    let product = db.products.find(req.params.id);
+    let company = db.companies.find(req.params.id);
+    return {product: product, companies: [company]};
+  });
   this.post('/products', 'product');
   this.del('/products/:id', 'product');
-  this.put('/products/:id', 'product');
+  this.put('/products/:id', function(db, req) {
+    let updated = JSON.parse(req.requestBody).product;
+    return {product: updated};
+  });
 
   this.get('/companies');
   this.get('/companies/:id', 'company');

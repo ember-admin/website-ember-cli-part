@@ -1,7 +1,7 @@
 import Mirage from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
-  title: function(i) {                  // and functions
+  title: function(i) {
     return 'Company# ' + i;
   },
   lat: 20,
