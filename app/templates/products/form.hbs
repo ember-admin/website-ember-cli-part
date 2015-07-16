@@ -1,7 +1,7 @@
 <form class="admin-form">
     <div class="panel panel-default">
         <div class="panel-heading">Base Information</div>
-        <div class="panel-body">
+        <div class="panel-body language-select">
           {{translate-tabs attribute="title" model=model locales=locales}}
           {{#each formAttributes as |attribute| }}
             {{ admin-input class="admin-attribute" model=model name=attribute }}
