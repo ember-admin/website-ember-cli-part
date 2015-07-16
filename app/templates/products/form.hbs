@@ -11,7 +11,7 @@
             <div class="controls">
               {{#admin-select content=companies selectedValue=model.company prompt="Select" as |select| }}
                 {{#each select.content as |item|}}
-                  <option value = {{ item.id }} selected={{ is-equal item selectedValue }}>
+                  <option value = {{ item.id }} selected={{ is-equal item select.selectedValue }}>
                     {{ item.title }}
                   </option>
                 {{/each}}                
