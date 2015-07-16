@@ -46,7 +46,6 @@ export default function() {
   this.post('/users', 'user');
   this.del('/users/:id', 'user');
   this.put('/users/:id', 'user');
-  this.get('/users/autocomplete', 'users');
   
   this.get('/categories');
   this.get('/categories/:id', 'category');
@@ -55,6 +54,24 @@ export default function() {
   this.put('/categories/:id', 'category');
   this.post('/categories/rebuild', 'category');
 
-}
+  this.get('/products', function(db) {
+    return {products: db.products, companies: db.companies};
+  });
+  this.get('/products/:id', function(db, req) {
+    let product = db.products.find(req.params.id);
+    let company = db.companies.find(req.params.id);
+    return {product: product, companies: [company]};
+  });
+  this.post('/products', 'product');
+  this.del('/products/:id', 'product');
+  this.put('/products/:id', function(db, req) {
+    let updated = JSON.parse(req.requestBody).product;
+    return {product: updated};
+  });
 
-  
+  this.get('/companies');
+  this.get('/companies/:id', 'company');
+  this.post('/companies', 'company');
+  this.del('/companies/:id', 'company');
+  this.put('/companies/:id', 'company');
+}

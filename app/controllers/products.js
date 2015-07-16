@@ -1,17 +1,21 @@
 import TableViewController from 'ember-cli-admin/mixins/controllers/table-view';
 import Ember from 'ember';
 import SearchLogic from 'ember-cli-admin/dsl/search';
+import config from '../config/environment';
 
-export default Ember.ObjectController.extend(TableViewController, {
-  formAttributes: ['title','price'],
+export default Ember.Controller.extend(TableViewController, {
+  formAttributes: ['price'],
   sortFields: ['id', 'title', 'price'],
   sortAssetsBy: "position",
+  tableAttributes: ['title', 'price', 'company', 'user', 'is_active'],
+
+  locales: config.locales,
 
   companies: function(){
-    return this.store.find('company');
+    return this.store.findAll('company');
   }.property(),
   users: function(){
-    return this.store.find('user');
+    return this.store.findAll('user');
   }.property(),
 
   searchForm: (function() {

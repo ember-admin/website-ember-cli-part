@@ -1,0 +1,34 @@
+<form class="admin-form">
+    <div class="panel panel-default">
+        <div class="panel-heading">Base Information</div>
+        <div class="panel-body language-select">
+          {{translate-tabs attribute="title" model=model locales=locales}}
+          {{#each formAttributes as |attribute| }}
+            {{ admin-input class="admin-attribute" model=model name=attribute }}
+          {{/each}}
+          <div class="control-group">
+            <label class="control-label">Company</label>
+            <div class="controls">
+              {{#admin-select content=companies selectedValue=model.company prompt="Select" as |select| }}
+                {{#each select.content as |item|}}
+                  <option value = {{ item.id }} selected={{ is-equal item.id select.selectedValue.id }}>
+                    {{ item.title }}
+                  </option>
+                {{/each}}                
+              {{/admin-select }}
+            </div>
+          </div>
+        </div>
+    </div>
+
+  {{#if model.asGoogleMap}}
+      <div class="panel panel-default">
+          <div class="panel-heading">Map</div>
+          <div class="panel-body">
+            {{google-map model=model}}
+          </div>
+      </div>
+  {{/if}}
+
+  {{partial "admin/form-buttons"}}
+</form>

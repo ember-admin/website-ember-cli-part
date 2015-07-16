@@ -4,7 +4,6 @@ import Ember from 'ember';
 export default Ember.ObjectController.extend(TreeViewController, {
   formAttributes: ['name'],
 
-
   roots: function(){
     if(!this.get('model.items')){
       return [];
